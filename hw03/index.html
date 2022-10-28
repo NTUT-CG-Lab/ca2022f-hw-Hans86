@@ -195,7 +195,7 @@
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      <h1>作業 01</h1>
+      <h1>作業 03</h1>
     </div>
   </div>
 
@@ -209,7 +209,7 @@
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。
+      這次的作業做起來特別困難，如果沒有助教的帶領說實在做不出來。而且要添加一些功能也很看角色是不是有支援，感覺對於控制角色的動作不是一件簡單得事情，因為實在有太多的參數變數了，不知道到底哪一個是哪一個。對於每個function的功能也不太了解，而且程式碼數量龐大，很難一一理解。
     </div>
   </div>
 
@@ -225,39 +225,24 @@
         </tr>
         <tr>
           <td rowspan="7" id="myTotal"></td>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox1"></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox1" checked></td>
           <td id='m1'>1</td>
-          <td>描述</td>
+          <td>Simple Baseline: 綁定參數(AngleX、AngleY、AngleZ)</td>
         </tr>
         <tr>
           <td><input type="checkbox" class="flipswitch" id="myCheckbox2" checked></td>
           <td id='m2'>1</td>
-          <td>描述</td>
+          <td>Medium Baseline: 綁定參數(BrowLY、BrowRY、BrowLX、BrowRX)</td>
         </tr>
         <tr>
           <td><input type="checkbox" class="flipswitch" id="myCheckbox3"></td>
           <td id='m3'>1</td>
-          <td>描述</td>
+          <td>Strong Baseline: 標準參數、特定參數控制</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox4" checked></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox4" ></td>
           <td id='m4'>1</td>
-          <td>描述</td>
-        </tr>
-        <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox5" checked="checked" ></td>
-          <td id='m5'>2</td>
-          <td>描述</td>
-        </tr>
-        <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox6" checked="checked" /></td>
-          <td id='m6'>2</td>
-          <td>描述</td>
-        </tr>
-        <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox7" checked="checked" /></td>
-          <td id='m7'>2</td>
-          <td>描述</td>
+          <td>Strong Baseline: 觸碰身體會發出聲音</td>
         </tr>
       </table>
     </div>
@@ -288,9 +273,9 @@
   d3.select("#myCheckbox2").on("change",update);
   d3.select("#myCheckbox3").on("change",update);
   d3.select("#myCheckbox4").on("change",update);
-  d3.select("#myCheckbox5").on("change",update);
+  /*d3.select("#myCheckbox5").on("change",update);
   d3.select("#myCheckbox6").on("change",update);
-  d3.select("#myCheckbox7").on("change",update);
+  d3.select("#myCheckbox7").on("change",update);*/
 
   update();
   
@@ -314,7 +299,7 @@
       score += parseInt(d3.select('#m4').html());   
     }
 
-    if (d3.select("#myCheckbox5").property("checked")){
+    /*if (d3.select("#myCheckbox5").property("checked")){
       score += parseInt(d3.select('#m5').html());   
     }
 
@@ -324,7 +309,7 @@
 
     if (d3.select("#myCheckbox7").property("checked")){
       score += parseInt(d3.select('#m7').html());   
-    }
+    }*/
 
     d3.select("#myTotal").html(score);    
   }
