@@ -142,14 +142,6 @@
         let imagePath = URL.createObjectURL(files[0]);
         document.body.style.backgroundImage = `url(${imagePath})`;
       });
-      backgroundFileEL.addEventListener("change",(e) => {
-        let files = e.target.files;
-
-        if(files[0]){
-          let imagePath = URL.createObjectURL(files[0]);
-          document.body.style.backgroundImage = `url(${imagePath})`;
-        }
-      });
 
       backgroundDragEL.addEventListener("dragover", (e) => {
         e.stopPropagation();
@@ -160,7 +152,11 @@
       let backgroundFileEL = document.querySelector("#backgroundFile");
 
       backgroundFileEL.addEventListener("change", (e) => {
-        alert("TODO background file change");
+        let files = e.target.files;
+        if(files[0]){
+          let imagePath = URL.createObjectURL(files[0]);
+          document.body.style.backgroundImage = `url(${imagePath})`;
+        }
       });
     </script>
   </body>
